@@ -3,6 +3,7 @@ package org.example.ultimatetictactoe;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,11 +25,14 @@ public class MainFragment extends Fragment {
          * Handle Buttons below here
          */
 
+        View aboutButton = rootView.findViewById(R.id.about_button);
+        View newButton = rootView.findViewById(R.id.new_button);
+        View continueButton = rootView.findViewById(R.id.continue_button);
+
         /*
          *About button
          */
 
-        View aboutButton = rootView.findViewById(R.id.about_button);
 
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +49,30 @@ public class MainFragment extends Fragment {
                 });
                 mDialog = builder.show();
 
+            }
+        });
+
+        /*
+         * New Game Button
+         */
+
+        newButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), GameActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+
+        /*
+         * Continue Game Button
+         */
+        continueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), GameActivity.class);
+                intent.putExtra(GameActivity.KEY_RESTORE, true);
+                getActivity().startActivity(intent);
             }
         });
 

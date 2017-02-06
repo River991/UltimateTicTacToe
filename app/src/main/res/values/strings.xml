@@ -12,4 +12,7 @@
         \n\n\
         A tie happens when there are no further moves. If a tie happens in the smaller game that tile counts as a win for both players in the bigger game.
     </string>
+    <string name="restart_label">Restart</string>
+    <string name="main_menu_label">Main Menu</string>
+    <string name="declare_winner">%1$s is the winner</string>
 </resources>

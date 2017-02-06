@@ -6,10 +6,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
-
-/**
- * Created by river on 06/02/17.
- */
+import android.view.View;
 
 public class GameActivity extends Activity {
 
@@ -63,4 +60,14 @@ public class GameActivity extends Activity {
 
     }
 
+
+    public void startThinking() {
+        View thinkView = findViewById(R.id.thinking);
+        thinkView.setVisibility(View.VISIBLE);
+    }
+
+    public void stopThinking() {
+        View thinkView = findViewById(R.id.thinking);
+        thinkView.setVisibility(View.GONE);
+    }
 }

@@ -32,4 +32,5 @@
             tools:layout="@layout/fragment_control" />
     </LinearLayout>
 
+    <include layout="@layout/thinking" />
 </FrameLayout>

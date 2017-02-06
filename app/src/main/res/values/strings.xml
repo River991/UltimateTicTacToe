@@ -1,4 +1,15 @@
 <resources>
-    <string name="app_name">UltimateTicTacToe</string>
+    <string name="app_name">UT3</string>
+    <string name="long_app_name">UltimateTicTacToe</string>
     <string name="action_settings">Settings</string>
+    <string name="continue_label">Continue</string>
+    <string name="new_label">New Game</string>
+    <string name="ok_label">OK</string>
+    <string name="about_label">About</string>
+    <string name="about_title">About Ultimate Tic Tac Toe</string>
+    <string name="about_text">
+        This game is played just like tic tac toe with one difference, to win a tile you need to first win a smaller game within that tile.
+        \n\n\
+        A tie happens when there are no further moves. If a tie happens in the smaller game that tile counts as a win for both players in the bigger game.
+    </string>
 </resources>

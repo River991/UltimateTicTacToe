@@ -4,9 +4,6 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageButton;
 
-/**
- * Created by river on 06/02/17.
- */
 
 public class Tile {
 

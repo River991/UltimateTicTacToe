@@ -11,9 +11,6 @@ import android.widget.ImageButton;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by river on 06/02/17.
- */
 
 public class GameFragment extends Fragment {
 
@@ -168,6 +165,7 @@ public class GameFragment extends Fragment {
                 builder.append(',');
             }
         }
+
         return builder.toString();
     }
 
@@ -177,7 +175,7 @@ public class GameFragment extends Fragment {
         mLastLarge = Integer.parseInt(fields[index++]);
         mLastSmall = Integer.parseInt(fields[index++]);
         for (int large = 0; large < 9; large++) {
-            for (int small = 0; small < 9; large++) {
+            for (int small = 0; small < 9; small++) {
                 Tile.Owner owner = Tile.Owner.valueOf(fields[index++]);
                 mSmallTiles[large][small].setOwner(owner);
             }

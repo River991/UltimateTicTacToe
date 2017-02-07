@@ -1,5 +1,7 @@
 package org.example.ultimatetictactoe;
 
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageButton;
@@ -177,6 +179,14 @@ public class Tile {
             tile.setSubTiles(newTiles);
         }
         return tile;
+    }
+
+    public void animate() {
+        Animator anim = AnimatorInflater.loadAnimator(mGame.getActivity(), R.animator.tictactoe);
+        if (getView() != null) {
+            anim.setTarget(getView());
+            anim.start();
+        }
     }
 
     public enum Owner {

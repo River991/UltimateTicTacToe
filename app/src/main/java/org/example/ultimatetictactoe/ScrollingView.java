@@ -49,8 +49,7 @@ public class ScrollingView extends View {
 
             mScrollPos += 2;
             if (mScrollPos >= max) mScrollPos -= max;
-            setTranslationX(-mScrollPos);
-            setTranslationY(-mScrollPos);
+            canvas.translate(-mScrollPos, -mScrollPos);
 
             mBackground.draw(canvas);
             this.invalidate();
